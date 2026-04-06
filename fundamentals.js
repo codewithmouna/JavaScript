@@ -59,3 +59,23 @@ console.log("Null:", y);
 }
 
 // console.log(blockVar); ❌ Error (not accessible outside)
+
+// 1. alert → shows a message
+alert("Welcome to JavaScript!");
+
+// 2. prompt → asks user for input
+let userName = prompt("What is your name?");
+alert("Hello " + userName);
+
+// prompt with default value
+let age1 = prompt("Enter your age:", "18");
+alert("Your age is " + age1);
+
+// 3. confirm → asks for OK / Cancel
+let isSure = confirm("Do you want to continue?");
+
+if (isSure) {
+  alert("You chose OK");
+} else {
+  alert("You chose Cancel");
+}
