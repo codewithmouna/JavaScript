@@ -478,3 +478,146 @@ let userRole = "admin";
 if (userRole === "admin" || userRole === "editor") {
   console.log("Access granted");
 }
+
+// loops
+
+// 1. while loop
+console.log("while loop:");
+
+let i = 1;
+while (i <= 3) {
+  console.log(i);
+  i++;
+}
+
+
+// 2. do...while loop
+console.log("\ndo...while loop:");
+
+let j = 1;
+do {
+  console.log(j);
+  j++;
+} while (j <= 3);
+
+
+// 3. for loop
+console.log("\nfor loop:");
+
+for (let k = 1; k <= 3; k++) {
+  console.log(k);
+}
+
+
+// 4. Breaking the loop
+console.log("\nbreak:");
+
+for (let x = 1; x <= 5; x++) {
+  if (x === 3) {
+    break; // stops loop completely
+  }
+  console.log(x);
+}
+
+
+// 5. Continue to next iteration
+console.log("\ncontinue:");
+
+for (let y = 1; y <= 5; y++) {
+  if (y === 3) {
+    continue; // skip this iteration
+  }
+  console.log(y);
+}
+
+
+// 6. Labels for break/continue
+console.log("\nlabels:");
+
+outerLoop: // label
+for (let a = 1; a <= 3; a++) {
+  for (let b = 1; b <= 3; b++) {
+    
+    if (a === 2 && b === 2) {
+      break outerLoop; // breaks outer loop
+    }
+
+    console.log(`a=${a}, b=${b}`);
+  }
+}
+
+// switch
+
+// 1. Syntax
+let day = 2;
+
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+
+  case 2:
+    console.log("Tuesday");
+    break;
+
+  case 3:
+    console.log("Wednesday");
+    break;
+
+  default:
+    console.log("Invalid day");
+}
+
+
+// 2. Example
+let role = "admin";
+
+switch (role) {
+  case "admin":
+    console.log("Full access");
+    break;
+
+  case "user":
+    console.log("Limited access");
+    break;
+
+  default:
+    console.log("No access");
+}
+
+
+// 3. Grouping of case
+let fruit = "apple";
+
+switch (fruit) {
+  case "apple":
+  case "mango":
+  case "banana":
+    console.log("This is a fruit");
+    break;
+
+  case "carrot":
+  case "potato":
+    console.log("This is a vegetable");
+    break;
+
+  default:
+    console.log("Unknown item");
+}
+
+
+// 4. Type matters (strict comparison ===)
+let num = "1";
+
+switch (num) {
+  case 1:
+    console.log("Number 1");
+    break;
+
+  case "1":
+    console.log("String 1");
+    break;
+
+  default:
+    console.log("No match");
+}
