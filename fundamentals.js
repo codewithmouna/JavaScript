@@ -621,3 +621,76 @@ switch (num) {
   default:
     console.log("No match");
 }
+
+// functions
+
+// 1. Function Declaration
+function greet() {
+  console.log("Hello!");
+}
+greet();
+
+
+// 2. Local variables
+function showMessage() {
+  let message = "I am local"; // local variable
+  console.log(message);
+}
+showMessage();
+
+// console.log(message); ❌ Error (not accessible outside)
+
+
+// 3. Outer variables
+let userName = "Mouna";
+
+function showUser() {
+  console.log("User:", userName); // accessing outer variable
+}
+showUser();
+
+
+// 4. Parameters
+function add(a, b) {
+  console.log(a + b);
+}
+add(5, 3);
+
+
+// 5. Default values
+function greetUser(name = "Guest") {
+  console.log("Hello " + name);
+}
+greetUser();        // Guest
+greetUser("Mouna"); // Mouna
+
+
+// 6. Returning a value
+function multiply(x, y) {
+  return x * y;
+}
+let result = multiply(4, 5);
+console.log("Result:", result);
+
+
+// 7. Naming a function
+// Good naming → clear purpose
+function calculateTotal(price, tax) {
+  return price + tax;
+}
+console.log(calculateTotal(100, 10));
+
+
+// 8. Functions == Comments
+// Instead of writing comments, use meaningful function names
+
+// ❌ Bad
+function f(a, b) {
+  return a * b;
+}
+
+// ✅ Good
+function calculateArea(length, width) {
+  return length * width;
+}
+console.log(calculateArea(5, 3));
