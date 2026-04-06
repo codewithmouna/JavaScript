@@ -416,3 +416,65 @@ let hasID = true;
 if (age >= 18 && hasID) {
   console.log("Allowed entry");
 }
+
+// or-precedence
+
+// 1. Comparison with ||
+
+// OR returns first truthy value (not always boolean!)
+let result1 = (5 > 3) || (2 > 10);
+console.log(result1); // true
+
+// Mixing values
+let result2 = 0 || 100;
+console.log(result2); // 100 (not true/false)
+
+// With comparison
+let age = 16;
+let canEnter = (age > 18) || (age === 16);
+console.log(canEnter); // true
+
+
+// ⚠️ Common mistake
+let x = 10;
+
+// WRONG ❌
+if (x === 5 || 10) {
+  console.log("This runs always!");
+}
+
+// CORRECT ✅
+if (x === 5 || x === 10) {
+  console.log("Correct condition");
+}
+
+
+
+// 2. Operator Precedence
+
+// && has higher precedence than ||
+let result3 = true || false && false;
+console.log(result3); 
+// true (because false && false → false, then true || false)
+
+// Using brackets to change order
+let result4 = (true || false) && false;
+console.log(result4); // false
+
+
+// Comparison + logical operators
+let result5 = 5 > 3 && 10 > 5;
+console.log(result5); // true
+
+let result6 = 5 > 3 || 10 < 5 && false;
+console.log(result6);
+// true (because && evaluated first)
+
+
+// 3. Real-world example
+let userRole = "admin";
+
+// Access if admin OR editor
+if (userRole === "admin" || userRole === "editor") {
+  console.log("Access granted");
+}
