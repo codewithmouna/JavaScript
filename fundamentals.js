@@ -228,3 +228,50 @@ console.log(c); // 3 (last value)
 
 let d = (a = 1, b = 2, a + b);
 console.log(d); // 3
+
+
+// comparisons
+
+// 1. Boolean is the result
+console.log("Boolean Results:");
+console.log(5 > 3);   // true
+console.log(5 < 3);   // false
+console.log(5 == 5);  // true
+console.log(5 != 5);  // false
+
+
+// 2. String comparison (lexicographical)
+console.log("\nString Comparison:");
+console.log("apple" > "banana"); // false
+console.log("cat" > "car");      // true (t > r)
+console.log("Z" > "a");          // false (uppercase < lowercase in ASCII)
+
+
+// 3. Comparison of different types
+console.log("\nDifferent Types:");
+console.log("5" > 2);   // true  ("5" → 5)
+console.log("01" == 1); // true  ("01" → 1)
+console.log(true == 1); // true
+console.log(false == 0); // true
+
+
+// 4. Strict equality (===)
+console.log("\nStrict Equality:");
+console.log(5 === "5");  // false (different types)
+console.log(5 === 5);    // true
+console.log(null === undefined); // false
+
+
+// 5. Comparison with null and undefined
+console.log("\nnull & undefined:");
+
+console.log(null == undefined);  // true (special rule)
+console.log(null === undefined); // false
+
+console.log(null > 0);  // false
+console.log(null == 0); // false
+console.log(null >= 0); // true (null → 0)
+
+console.log(undefined == 0); // false
+console.log(undefined > 0);  // false
+console.log(undefined < 0);  // false
