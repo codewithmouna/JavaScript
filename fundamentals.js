@@ -275,3 +275,77 @@ console.log(null >= 0); // true (null → 0)
 console.log(undefined == 0); // false
 console.log(undefined > 0);  // false
 console.log(undefined < 0);  // false
+
+// conditionals
+
+// 1. if statement
+let age = 20;
+
+if (age >= 18) {
+  console.log("You are an adult");
+}
+
+
+// 2. Boolean conversion
+console.log("\nBoolean Conversion:");
+
+if ("hello") {   // truthy
+  console.log("This runs because string is truthy");
+}
+
+if (0) {         // falsy
+  console.log("This will NOT run");
+}
+
+
+// 3. else clause
+let marks = 40;
+
+if (marks >= 50) {
+  console.log("Pass");
+} else {
+  console.log("Fail");
+}
+
+
+// 4. else if (multiple conditions)
+let score = 75;
+
+if (score >= 90) {
+  console.log("Grade A");
+} else if (score >= 70) {
+  console.log("Grade B");
+} else if (score >= 50) {
+  console.log("Grade C");
+} else {
+  console.log("Fail");
+}
+
+
+// 5. Conditional operator (ternary ?)
+let result = (age >= 18) ? "Adult" : "Minor";
+console.log("\nTernary:");
+console.log(result);
+
+
+// 6. Multiple ? (nested ternary)
+let message = (score >= 90) ? "A" :
+              (score >= 70) ? "B" :
+              (score >= 50) ? "C" : "Fail";
+
+console.log("\nNested Ternary:");
+console.log(message);
+
+
+// 7. Non-traditional use of ?
+let company = "TCS";
+
+// using ? as alternative to if
+(company === "TCS") ? console.log("Good Company") : console.log("Other Company");
+
+// multiple actions (not recommended but possible)
+let login = true;
+
+login 
+  ? (console.log("Welcome"), console.log("Dashboard loaded"))
+  : console.log("Please login");
