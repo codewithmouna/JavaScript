@@ -128,3 +128,103 @@ console.log(bool2); // false
 console.log(bool3); // false
 console.log(bool4); // false
 console.log(bool5); // false
+
+
+
+// 1. Unary, Binary, Operand
+let x = 5;
+
+// Unary operator (one operand)
+x = -x;
+console.log("Unary (-x):", x); // -5
+
+// Binary operator (two operands)
+let a = 10, b = 3;
+let sum = a + b;
+console.log("Binary (a + b):", sum); // 13
+
+// Operand = values operators act on
+// In (a + b) → a and b are operands
+
+
+// 2. Maths Operators
+console.log("\nMaths:");
+console.log(a + b); // addition
+console.log(a - b); // subtraction
+console.log(a * b); // multiplication
+console.log(a / b); // division
+console.log(a % b); // modulus
+console.log(a ** b); // exponentiation
+
+
+// 3. String concatenation with +
+let str1 = "Hello";
+let str2 = "World";
+console.log("\nString Concatenation:");
+console.log(str1 + " " + str2); // Hello World
+
+
+// 4. Numeric conversion, unary +
+let numStr = "100";
+let converted = +numStr;
+console.log("\nUnary + Conversion:");
+console.log(converted, typeof converted); // 100 number
+
+
+// 5. Operator precedence
+let result = 2 + 3 * 4;
+console.log("\nOperator Precedence:");
+console.log(result); // 14 (* happens before +)
+
+let result2 = (2 + 3) * 4;
+console.log(result2); // 20
+
+
+// 6. Assignment
+let value1 = 10;
+value1 = value1 + 5;
+console.log("\nAssignment:");
+console.log(value1); // 15
+
+
+// 7. Modify-in-place
+let n = 10;
+n += 5;  // same as n = n + 5
+n *= 2;  // same as n = n * 2
+console.log("\nModify-in-place:");
+console.log(n); // 30
+
+
+// 8. Increment / Decrement
+let count = 5;
+
+console.log("\nIncrement/Decrement:");
+console.log(++count); // pre-increment → 6
+console.log(count++); // post-increment → 6 (then becomes 7)
+console.log(count);   // 7
+
+console.log(--count); // pre-decrement → 6
+console.log(count--); // post-decrement → 6 (then becomes 5)
+console.log(count);   // 5
+
+
+// 9. Bitwise operators
+let p = 5;  // 101
+let q = 3;  // 011
+
+console.log("\nBitwise:");
+console.log(p & q); // AND → 1
+console.log(p | q); // OR → 7
+console.log(p ^ q); // XOR → 6
+console.log(~p);    // NOT → -6
+console.log(p << 1); // left shift → 10
+console.log(p >> 1); // right shift → 2
+
+
+// 10. Comma operator
+let c = (1, 2, 3);
+console.log("\nComma:");
+console.log(c); // 3 (last value)
+
+let d = (a = 1, b = 2, a + b);
+console.log(d); // 3
