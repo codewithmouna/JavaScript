@@ -79,3 +79,52 @@ if (isSure) {
 } else {
   alert("You chose Cancel");
 }
+
+
+
+// 1. String Conversion
+let value = 123;
+
+let str1 = String(value);     // explicit conversion
+let str2 = value.toString(); // method conversion
+
+console.log("String Conversion:");
+console.log(str1, typeof str1); // "123", string
+console.log(str2, typeof str2); // "123", string);
+
+
+// 2. Numeric Conversion
+let strNumber = "456";
+let invalidNumber = "123abc";
+
+let num1 = Number(strNumber);     // explicit
+let num2 = parseInt(strNumber);   // integer
+let num3 = parseFloat("3.14");    // float
+let num4 = Number(invalidNumber); // NaN
+
+console.log("\nNumeric Conversion:");
+console.log(num1, typeof num1); // 456 number
+console.log(num2, typeof num2); // 456 number
+console.log(num3, typeof num3); // 3.14 number
+console.log(num4);              // NaN
+
+
+// 3. Boolean Conversion
+let truthyValue = "Hello";
+let falsyValue1 = "";
+let falsyValue2 = 0;
+let falsyValue3 = null;
+let falsyValue4 = undefined;
+
+let bool1 = Boolean(truthyValue);
+let bool2 = Boolean(falsyValue1);
+let bool3 = Boolean(falsyValue2);
+let bool4 = Boolean(falsyValue3);
+let bool5 = Boolean(falsyValue4);
+
+console.log("\nBoolean Conversion:");
+console.log(bool1); // true
+console.log(bool2); // false
+console.log(bool3); // false
+console.log(bool4); // false
+console.log(bool5); // false
