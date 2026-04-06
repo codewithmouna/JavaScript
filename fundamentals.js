@@ -349,3 +349,70 @@ let login = true;
 login 
   ? (console.log("Welcome"), console.log("Dashboard loaded"))
   : console.log("Please login");
+
+
+  // logical-operators
+
+// 1. OR (||)
+console.log("OR (||):");
+
+// basic usage
+console.log(true || false);  // true
+console.log(false || false); // false
+
+// OR finds first truthy value
+let result1 = 0 || "" || null || "Hello" || 5;
+console.log(result1); // "Hello"
+
+let result2 = null || undefined || 0;
+console.log(result2); // 0 (last value if all falsy)
+
+
+// 2. AND (&&)
+console.log("\nAND (&&):");
+
+// basic usage
+console.log(true && true);   // true
+console.log(true && false);  // false
+
+// AND finds first falsy value
+let result3 = 1 && 2 && 0 && 5;
+console.log(result3); // 0
+
+let result4 = 1 && 2 && 3;
+console.log(result4); // 3 (last value if all truthy)
+
+
+// 3. NOT (!)
+console.log("\nNOT (!):");
+
+// basic usage
+console.log(!true);  // false
+console.log(!false); // true
+
+// converts to boolean and reverses
+console.log(!0);     // true (0 is falsy)
+console.log(!"hi");  // false (non-empty string is truthy)
+
+// double NOT (!!) → boolean conversion
+console.log(!!"hello"); // true
+console.log(!!0);       // false
+
+
+// 4. Real-world examples
+
+// default value using ||
+let userName = "" || "Guest";
+console.log("\nDefault Name:", userName); // Guest
+
+// condition check using &&
+let isLoggedIn = true;
+isLoggedIn && console.log("Welcome user");
+
+// combine multiple conditions
+let age = 20;
+let hasID = true;
+
+if (age >= 18 && hasID) {
+  console.log("Allowed entry");
+}
